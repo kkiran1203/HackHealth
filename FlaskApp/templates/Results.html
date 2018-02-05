@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>Mental Health Survey</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<h2><center>YOU MIGHT CONSIDER MAKING FEW CHANGES TO IMPROVE YOUR MENTAL HEALTH CONDITIONS</center></h2>
+<h3 class="w3-center">Factors that affect mental health </h3>
+
+<div class="w3-content w3-display-container" style="max-width: 900px ">
+  <img class="mySlides" src="../static/r2.jpg" style="width:100%">
+  <img class="mySlides" src="../static/Reasons.jpg" style="width:100%">
+  <img class="mySlides" src="../static/r3.jpg" style="width:100%">
+  <img class="mySlides" src="../static/r4.jpg" style="width:100%">
+  <img class="mySlides" src="../static/r5.jpg" style="width:100%">
+  <img class="mySlides" src="../static/r6.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+<center>
+<a href="http://localhost:5000">
+   <input type="button" value="Take the survey again!" />
+</a></center>
+</body>
+</html>
